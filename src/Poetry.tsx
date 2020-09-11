@@ -1,46 +1,75 @@
 import './Poetry.css';
 import React from "react";
 
-let downson = 'https://poetrydb.org/author/Ernest Dowson/lines.json';
+let downson = 'https://poetrydb.org/author/Ernest%20Dowson/lines.json';
 let shelley = 'https://poetrydb.org/title/Ozymandias/lines.json';
 let shakespeare = 'https://poetrydb.org/author/Shakespeare/lines.json';
 let url = '';
 
-interface IState {
-    data : [];
+enum Poet {
+    Shakespeare,
+    Shelley,
+    Downson
 }
 
-class Poetry extends React.Component<string, IState> {
-    constructor(props : string) {
+interface IState {
+    data : [{lines: [string]}];
+    isLoaded : boolean,
+    poet : Poet
+}
+
+class Poetry extends React.Component<any, IState> {
+    constructor(props : any) {
         super(props)
         this.state = {
-            data : [],
+            data : [{lines: [""]}],
+            isLoaded : false,
+            poet : Poet.Shakespeare
         };
     }
 
-    // TODO: logikk for å bytte url her
-    url = downson;
+    url = shakespeare;
 
     componentDidMount() {
-        this.fetchPoetry(url)
-    }
+        // Logikk for å bytte url, avhengig av hvilken poet som er valgt
+        switch (this.state.poet) {
+            case Poet.Shakespeare:
+                this.url = shakespeare;
+                break;
+            case Poet.Downson:
+                this.url = downson;
+                break;
+            case Poet.Shelley:
+                this.url = shelley;
+                break;
+            default:
+                this.url = shakespeare;
+                break;
+        }
 
-    fetchPoetry(url : string) {
-        fetch(url)
-            .then((response) => response.json())
-            .then((poem) => {
-                this.setState({ data : poem[0].lines });
-            });
-        console.log(this.state.data);
+        fetch(this.url)
+            .then(response => {
+                return response.json();
+            })
+            .then(
+                (json) => {
+                    this.setState({ data : json, isLoaded : true})
+                },
+                () => {
+                    this.setState({data : [{lines: ["An error occured while fetching poetry"]}], isLoaded : true})
+                }
+                );
     }
 
     render() {
+        // Endre tall i splice for å få med flere linjer i diktet
         return(
             <div>
-                {this.state.data?.map((item) => <p key={item}> {item} </p>) ?? ['empty']}
+                {this.state.data[0].lines?.slice(0, 5).map((line, index) => <p key={index}>{ line }</p>) ?? ["Empty"]}
             </div>
         );
     }
 }
 
 export default Poetry;
+

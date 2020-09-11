@@ -2,3 +2,4 @@
 02.09: 2 timer (lese opp på React + sette opp prosjekt)
 07.09: 1 time (lese opp på React, se eksempler)
 10.09: 5 timer (lage issues, diskusjon, kode Poetry funksjonalitet)
+11.09: 4 timer (sette opp timeføring, debugge Poetry)
