@@ -43,44 +43,62 @@ html, body {
   margin: 0%;
 }
 
+#grid_sidebar > h3 {
+  margin-left: 5%;
+}
+
+#grid_sidebar > ul, h4 {
+  margin-left: 15%;
+}
+
 #header {
   width: 100%;
   height: 50px;
-  background-color: rgb(207, 207, 238);
+  background-color: #D9F0F8;
+  text-align: center;
+  margin: 0;
 }
 
 #header > p {
-  text-align: center;
   margin-top: 5px;
 }
 
 /* Grid */
 #grid_container {
   display: grid;
-  grid-template-columns: 50% 50%;
-  width: 70%;
-  margin-left: 15%;
-  margin-right: 15%;
+  grid-template-columns: 20% 40% 30% 10%;
+  width: 100%;
 }
 
 #grid_svg {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 3;
 }
 
 #grid_poem {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 #grid_sound {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
 
 #grid_faviourite {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#grid_sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 100%;
+  width: 200px;
+  background-color: #EEEEEE;
+  position: fixed;
 }
