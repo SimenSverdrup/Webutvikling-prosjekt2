@@ -18,19 +18,18 @@ export default function Sidebar() {
             <h4>Bilde</h4>
             <ul>
                 <ListElement text={'Sommerfugl'} />
-                <li>Sommerfugl</li>
-                <li>Hytte</li>
-                <li>Epletre</li>
+                <ListElement text={'Hytte'} />
+                <ListElement text={'Epletre'} />
             </ul>
             <h4>Poesi</h4>
             <ul>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
+                <ListElement text={'Lorem ipsum'} />
+                <ListElement text={'Lorem ipsum'} />
             </ul>
             <h4>Lys</h4>
             <ul>
-                <li>Alt. 1</li>
-                <li>Alt. 2</li>
+                <ListElement text={'Alt. 1'} />
+                <ListElement text={'Alt. 2'} />
             </ul>
 
         </div>

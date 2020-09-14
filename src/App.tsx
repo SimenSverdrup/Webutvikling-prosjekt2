@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import Title from './components/Title';
 import GridContainer from './components/GridContainer';
 import './App.css';
