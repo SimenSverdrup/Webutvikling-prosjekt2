@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import Title from './components/Title';
 import GridContainer from './components/GridContainer';
 import './App.css';
-import Poetry from './Poetry'
 import Sidebar from './components/Sidebar';
 import { GalleryContext } from './context/GalleryContext';
 
