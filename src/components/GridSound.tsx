@@ -4,7 +4,7 @@ interface Props {
     audio: string;
 }
 
-export default function GridSound(props:Props) {
+export default function GridSound(props: Props) {
     return (
         <div id="grid_sound">
             <audio controls src={props.audio}>
