@@ -1,3 +1,4 @@
+/*
 .App {
   text-align: center;
 }
@@ -25,7 +26,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #61fb61;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +37,113 @@
     transform: rotate(360deg);
   }
 }
+*/
+
+html, body {
+  margin: 0%;
+}
+
+#sidebar > h3 {
+  margin-left: 5%;
+}
+
+#sidebar > ul, h4 {
+  margin-left: 15%;
+}
+
+#header {
+  width: 100%;
+  height: 50px;
+  background-color: #D9F0F8;
+  text-align: center;
+  margin: 0;
+}
+
+#header > p {
+  margin-top: 5px;
+}
+
+h1 {
+  font-family: arial, verdana;
+}
+
+#sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #EEEEEE;
+  position: fixed;
+  margin: 0 auto 0 0;
+}
+
+/* Grid */
+
+#grid_container {
+  display: grid;
+  grid-template-columns: 45% 45% 10%;
+  width: 70%;
+  margin: 5% 0 0% 20%;
+}
+
+#grid_svg {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#grid_poem {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#grid_sound {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+#grid_faviourite {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  margin-top: 0;
+}
+
+/*#grid_container {
+  display: grid;
+  grid-template-columns: 20% 40% 30% 10%;
+  width: 100%;
+}
+
+#grid_svg {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+#grid_poem {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#grid_sound {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#grid_faviourite {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#grid_sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 100%;
+  width: 200px;
+  background-color: #EEEEEE;
+  position: fixed;
+}*/
