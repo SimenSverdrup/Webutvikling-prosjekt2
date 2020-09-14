@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default function GridSound() {
+interface Props {
+    audio: string;
+}
+
+export default function GridSound(props:Props) {
     return (
         <div id="grid_sound">
-            <p>Her kommer det lydbar</p>
+            <audio controls src={props.audio}>
+            Your browser does not support the <code>audio</code> element. </audio>
         </div>
     )
 }

@@ -1,9 +1,10 @@
 import React from 'react';
+import ListElement from './ListElement';
 
-export default function GridSidebar() {
+export default function Sidebar() {
     // han sa jeg skulle ha fuksjon inni funksjon (altså at det som er kommentert her
     // er inni en ny funksjon som endrer ting, altså js.delen)
-    
+
     //state 
 
     //funksjoner som endrer state
@@ -12,10 +13,11 @@ export default function GridSidebar() {
     //ting som vises
     
     return (
-        <div id="grid_sidebar">
+        <div id="sidebar">
             <h3>Utstillingsvalg</h3>
             <h4>Bilde</h4>
             <ul>
+                <ListElement text={'Sommerfugl'} />
                 <li>Sommerfugl</li>
                 <li>Hytte</li>
                 <li>Epletre</li>
@@ -30,6 +32,7 @@ export default function GridSidebar() {
                 <li>Alt. 1</li>
                 <li>Alt. 2</li>
             </ul>
+
         </div>
     )
 }
