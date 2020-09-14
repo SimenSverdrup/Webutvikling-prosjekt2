@@ -1,9 +1,10 @@
 import React from 'react';
+import Poetry from "./Poetry";
 
 export default function GridPoem() {
     return (
         <div id="grid_poem">
-            <p>Her kommer det poems</p>
+            <Poetry/>
         </div>
     )
 }

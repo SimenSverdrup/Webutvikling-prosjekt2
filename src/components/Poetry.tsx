@@ -62,10 +62,10 @@ class Poetry extends React.Component<any, IState> {
     }
 
     render() {
-        // Endre tall i splice for å få med flere linjer i diktet
+        // Endre tall i slice for å få med flere linjer i diktet
         return(
-            <div>
-                {this.state.data[0].lines?.slice(0, 5).map((line, index) => <p key={index}>{ line }</p>) ?? ["Empty"]}
+            <div id="poem">
+                {this.state.data[0].lines?.slice(0, 7).map((line, index) => <p key={index}>{ line }</p>) ?? ["Empty"]}
             </div>
         );
     }
