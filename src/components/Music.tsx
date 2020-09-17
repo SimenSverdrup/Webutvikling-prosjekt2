@@ -1,11 +1,5 @@
 import React from 'react';
 
-/*
-interface Props {
-    audio: string;
-}
-*/
-
 enum Sound {
     Canon,
     Boo,
@@ -22,7 +16,7 @@ class Music extends React.Component {
     applausePath = require("../assets/applause6.mp3");
     booPath = require("../assets/applause6.mp3");
 
-    path = this.applausePath;
+    path = this.canonPath;
 
     componentDidMount() {
         switch(this.state.sound) {
