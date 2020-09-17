@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { GalleryContext} from '../context/GalleryContext';
+import { GalleryContext } from '../context/GalleryContext';
 import ListElement from './ListElement';
 
 export default function Sidebar() {
@@ -30,7 +30,7 @@ export default function Sidebar() {
                 <ListElement text={'Lorem ipsum'} setter={poemProvider.setPoemUrl}/>
                 <ListElement text={'Lorem ipsum'} setter={poemProvider.setPoemUrl}/>
             </ul>
-            <h4>Lys</h4>
+            <h4>Lyd</h4>
             <ul>
                 <ListElement text={'Alt. 1'} setter={soundProvider.setSoundUrl}/>
                 <ListElement text={'Alt. 2'} setter={soundProvider.setSoundUrl}/>
