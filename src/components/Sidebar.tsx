@@ -21,19 +21,20 @@ export default function Sidebar() {
             <h3>Utstillingsvalg</h3>
             <h4>Bilde</h4>
             <ul>
-                <ListElement text={'Sommerfugl'} setter={imgProvider.setImgUrl} />
-                <ListElement text={'Hytte'} setter={imgProvider.setImgUrl} />
-                <ListElement text={'Epletre'} setter={imgProvider.setImgUrl} />
+                <ListElement text={'Sommerfugl'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Hytte'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Epletre'} setter={imgProvider.setImgUrl} url={""}/>
             </ul>
             <h4>Poesi</h4>
             <ul>
-                <ListElement text={'Lorem ipsum'} setter={poemProvider.setPoemUrl}/>
-                <ListElement text={'Lorem ipsum'} setter={poemProvider.setPoemUrl}/>
+                <ListElement text={'Shakespare '} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Shakespeare/lines.json"}/>
+                <ListElement text={'Shelly'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/title/Ozymandias/lines.json"} />
+                <ListElement text={'Siste'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Ernest%20Dowson/lines.json"}/>
             </ul>
             <h4>Lyd</h4>
             <ul>
-                <ListElement text={'Alt. 1'} setter={soundProvider.setSoundUrl}/>
-                <ListElement text={'Alt. 2'} setter={soundProvider.setSoundUrl}/>
+                <ListElement text={'Alt. 1'} setter={soundProvider.setSoundUrl} url={""}/>
+                <ListElement text={'Alt. 2'} setter={soundProvider.setSoundUrl} url={""}/>
             </ul>
 
         </div>

@@ -4,12 +4,12 @@ import { GalleryContext } from'../context/GalleryContext';
 interface Props {
     text: string;
     setter: (val: string) => void; 
-    //legg til url
+    url: string;
 }
 
 export default function ListElement(props:Props) {
     
     return (
-                <li onClick={() => props.setter(props.text)}>{props.text}</li>) //bytt setter fra props.txt til props.url
+                <li onClick={() => props.setter(props.url)}>{props.text}</li>) //bytt setter fra props.txt til props.url
 
 }
