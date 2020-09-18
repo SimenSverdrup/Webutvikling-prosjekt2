@@ -22,15 +22,15 @@ export default function Sidebar() {
             <h3>Utstillingsvalg</h3>
             <h4>Bilde</h4>
             <ul>
-                <ListElement text={'Sommerfugl'} setter={imgProvider.setImgUrl} url={""}/>
-                <ListElement text={'Hytte'} setter={imgProvider.setImgUrl} url={""}/>
-                <ListElement text={'Epletre'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Rakett'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Tenkende'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Mandala'} setter={imgProvider.setImgUrl} url={""}/>
             </ul>
             <h4>Poesi</h4>
             <ul>
                 <ListElement text={'Shakespare '} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Shakespeare/lines.json"}/>
                 <ListElement text={'Shelly'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/title/Ozymandias/lines.json"} />
-                <ListElement text={'Siste'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Ernest%20Dowson/lines.json"}/>
+                <ListElement text={'Downson'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Ernest%20Dowson/lines.json"}/>
             </ul>
             <h4>Lyd</h4>
             <ul>
