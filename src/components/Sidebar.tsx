@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { GalleryContext } from '../context/GalleryContext';
+import Button from './Button';
+import GridFavourite from './Button';
 import ListElement from './ListElement';
 
 
@@ -22,15 +24,15 @@ export default function Sidebar() {
             <h3>Utstillingsvalg</h3>
             <h4>Bilde</h4>
             <ul>
-                <ListElement text={'Sommerfugl'} setter={imgProvider.setImgUrl} url={""}/>
-                <ListElement text={'Hytte'} setter={imgProvider.setImgUrl} url={""}/>
-                <ListElement text={'Epletre'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Rakett'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Tenkende'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Mandala'} setter={imgProvider.setImgUrl} url={""}/>
             </ul>
             <h4>Poesi</h4>
             <ul>
                 <ListElement text={'Shakespeare'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Shakespeare/lines.json"}/>
                 <ListElement text={'Shelley'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/title/Ozymandias/lines.json"} />
-                <ListElement text={'Ernest Downson'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Ernest%20Dowson/lines.json"}/>
+                <ListElement text={'Downson'} setter={poemProvider.setPoemUrl} url={"https://poetrydb.org/author/Ernest%20Dowson/lines.json"}/>
             </ul>
             <h4>Lyd</h4>
             <ul>
@@ -38,6 +40,11 @@ export default function Sidebar() {
                 <ListElement text={'Applause'} setter={soundProvider.setSoundUrl} url={"Applause"}/>
                 <ListElement text={'Boo'} setter={soundProvider.setSoundUrl} url={"Boo"}/>
             </ul>
+
+            {/*<GridFavourite />*/}
+            <Button id="loadBut" text={'Hent favoritt'}/>
+            <Button id="saveBut" text={'Lagre favoritt'}/>
+
 
         </div>
     )

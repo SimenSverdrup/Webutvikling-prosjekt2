@@ -3,7 +3,7 @@ import GridSvg from './GridSvg';
 import Music from './Music';
 import Poetry from './Poetry';
 import Gallery from './Gallery';
-import GridFavourite from './GridFavourite';
+import GridFavourite from './Button';
 
 
 export default function GridContainer() {
@@ -18,7 +18,6 @@ export default function GridContainer() {
             <Poetry />
             <Gallery img={imgChoice} />
             <button onClick={() => setImgChoice(3)}>Vis bilde 3</button>
-            <GridFavourite />
             <Music />
         </div>
     )

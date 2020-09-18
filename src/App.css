@@ -6,6 +6,12 @@ html, body {
   margin-left: 5%;
 }
 
+#sidebar > h4 {
+  margin-left: 15%;
+  margin-top: 20%;
+  margin-bottom: 2%;
+}
+
 #sidebar > ul, h4 {
   margin-left: 15%;
 }
@@ -24,6 +30,20 @@ html, body {
 
 h1 {
   font-family: arial, verdana;
+}
+
+/* Denne fungerer ikke. Sikkert fordi jeg sender id som prop, men jeg ser ikke hvor feilen er */
+#saveBut {
+  margin: 80% auto auto 18%;
+  padding: 4%;
+  border-radius: 6px;
+}
+
+/* Denne fungerer ikke. Sikkert fordi jeg sender id som prop, men jeg ser ikke hvor feilen er */
+#loadBut {
+  margin: 60% auto auto 18%;
+  padding: 4%;
+  border-radius: 6px;
 }
 
 #sidebar {
