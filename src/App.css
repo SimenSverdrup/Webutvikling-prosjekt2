@@ -32,8 +32,16 @@ h1 {
   font-family: arial, verdana;
 }
 
-button {
+/* Denne fungerer ikke. Sikkert fordi jeg sender id som prop, men jeg ser ikke hvor feilen er */
+#saveBut {
   margin: 80% auto auto 18%;
+  padding: 4%;
+  border-radius: 6px;
+}
+
+/* Denne fungerer ikke. Sikkert fordi jeg sender id som prop, men jeg ser ikke hvor feilen er */
+#loadBut {
+  margin: 60% auto auto 18%;
   padding: 4%;
   border-radius: 6px;
 }
