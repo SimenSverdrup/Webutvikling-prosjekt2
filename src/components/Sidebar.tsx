@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GalleryContext } from '../context/GalleryContext';
+import GridFavourite from './GridFavourite';
 import ListElement from './ListElement';
 
 export default function Sidebar() {
@@ -36,6 +37,8 @@ export default function Sidebar() {
                 <ListElement text={'Alt. 1'} setter={soundProvider.setSoundUrl} url={""}/>
                 <ListElement text={'Alt. 2'} setter={soundProvider.setSoundUrl} url={""}/>
             </ul>
+
+            <GridFavourite />
 
         </div>
     )
