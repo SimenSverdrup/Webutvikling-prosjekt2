@@ -6,6 +6,12 @@ html, body {
   margin-left: 5%;
 }
 
+#sidebar > h4 {
+  margin-left: 15%;
+  margin-top: 20%;
+  margin-bottom: 2%;
+}
+
 #sidebar > ul, h4 {
   margin-left: 15%;
 }
@@ -24,6 +30,12 @@ html, body {
 
 h1 {
   font-family: arial, verdana;
+}
+
+button {
+  margin: 80% auto auto 18%;
+  padding: 4%;
+  border-radius: 6px;
 }
 
 #sidebar {
