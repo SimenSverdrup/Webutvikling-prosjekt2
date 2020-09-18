@@ -3,7 +3,7 @@ import GridSvg from './GridSvg';
 import Music from './Music';
 import Poetry from "./Poetry";
 import Gallery from './Gallery';
-import GridFavourite from './GridFavourite';
+import GridFavourite from './Button';
 
 
 export default function GridContainer() {
