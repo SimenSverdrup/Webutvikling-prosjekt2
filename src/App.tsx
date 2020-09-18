@@ -7,7 +7,7 @@ import { GalleryContext } from './context/GalleryContext';
 
 function App() {
 
-  //henter ut state for image, lyd og dikt
+  // Henter ut state for image, lyd og dikt
   const { imgProvider, soundProvider, poemProvider}  = useContext(GalleryContext)!;
 
   return (

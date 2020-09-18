@@ -4,4 +4,5 @@
 10.09: 5 timer (lage issues, diskusjon, kode Poetry funksjonalitet)
 11.09: 4 timer (sette opp timeføring, debugge Poetry)
 14.09: 4 timer (fikse merge issues, pynte på poem, begynne på musikkspiller)
-17.09:
+17.09: 5 timer (fikse onclick, lese opp på hooks)
+18.09: 2 timer (fikse musikk state endring, finne ut at PoetryDB var nede...)

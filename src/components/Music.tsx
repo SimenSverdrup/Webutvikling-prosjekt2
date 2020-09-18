@@ -1,49 +1,35 @@
 import React from 'react';
+import { GalleryContext } from '../context/GalleryContext';
+import Canon from '../assets/Canon.mp3';
+import Boo from '../assets/boohiss.mp3';
+import Applause from '../assets/applause6.mp3';
 
-enum Sound {
-    Canon,
-    Boo,
-    Applause
-}
 
-class Music extends React.Component {
-    state = {
-        play: false,
-        sound: Sound.Canon
-    }
+const Music = () => {
+    const { soundProvider }  = React.useContext(GalleryContext)!;
+    const [data, setData ] = React.useState(Canon);
 
-    canonPath = require("../assets/Canon.mp3");
-    applausePath = require("../assets/applause6.mp3");
-    booPath = require("../assets/applause6.mp3");
-
-    path = this.canonPath;
-
-    componentDidMount() {
-        switch(this.state.sound) {
-            case Sound.Canon:
-                this.path = this.canonPath;
-                break;
-            case Sound.Applause:
-                this.path = this.applausePath;
-                break;
-            case Sound.Boo:
-                this.path = this.booPath;
-                break;
+    React.useEffect( () => {
+        if (soundProvider) {
+            switch (soundProvider.soundUrl) {
+                case 'Canon':
+                    setData(Canon);
+                    break;
+                case 'Applause':
+                    setData(Applause);
+                    break;
+                case 'Boo':
+                    setData(Boo);
+                    break;
+            }
         }
-        console.log(this.path);
-    }
+    }, [soundProvider])
 
-
-    render() {
-        return (
-            <div id="grid_sound">
-                <audio controls>
-                    <source src={this.path} type="audio/mp3"/>
-                    Your browser does not support the audio element.
-                </audio>
-            </div>
-        );
-    }
+    return(<div id="grid_sound">
+        <audio src={data} controls>
+        </audio>
+    </div>);
 }
+
 
 export default Music;
