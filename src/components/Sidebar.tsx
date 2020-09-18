@@ -34,9 +34,9 @@ export default function Sidebar() {
             </ul>
             <h4>Lyd</h4>
             <ul>
-                <ListElement text={'Pachelbel'} setter={soundProvider.setSoundUrl} url={"../assets/Canon.mp3"}/>
-                <ListElement text={'Applause'} setter={soundProvider.setSoundUrl} url={"../assets/applause6.mp3"}/>
-                <ListElement text={'Boo'} setter={soundProvider.setSoundUrl} url={"../assets/boohiss.mp3"}/>
+                <ListElement text={'Pachelbel'} setter={soundProvider.setSoundUrl} url={"Canon"}/>
+                <ListElement text={'Applause'} setter={soundProvider.setSoundUrl} url={"Applause"}/>
+                <ListElement text={'Boo'} setter={soundProvider.setSoundUrl} url={"Boo"}/>
             </ul>
 
         </div>

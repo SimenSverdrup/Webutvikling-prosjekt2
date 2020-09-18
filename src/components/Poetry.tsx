@@ -7,7 +7,6 @@ const Poetry = () => {
     const { poemProvider }  = React.useContext(GalleryContext)!;
     const [data, setData ] = React.useState("Select an author to display beautiful poetry");
 
-
     React.useEffect( () => {
         fetch(poemProvider.poemUrl)
             .then(response => {
@@ -19,6 +18,7 @@ const Poetry = () => {
                     setData(json[0].lines?.slice(0, 7).join("\n"))
                 }).catch(err => {
                     console.log(err);
+                    setData("Unable to fetch poetry.");
         });
     },[poemProvider])
 
