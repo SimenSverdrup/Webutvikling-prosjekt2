@@ -18,7 +18,6 @@ export default function GridContainer() {
             <Poetry />
             <Gallery img={imgChoice} />
             <button onClick={() => setImgChoice(3)}>Vis bilde 3</button>
-            <GridFavourite />
             <Music />
 
         </div>
