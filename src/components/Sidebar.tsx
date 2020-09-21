@@ -24,9 +24,9 @@ export default function Sidebar() {
             <h3>Utstillingsvalg</h3>
             <h4>Bilde</h4>
             <ul>
-                <ListElement text={'Rakett'} setter={imgProvider.setImgUrl} url={""}/>
-                <ListElement text={'Tenkende'} setter={imgProvider.setImgUrl} url={""}/>
-                <ListElement text={'Mandala'} setter={imgProvider.setImgUrl} url={""}/>
+                <ListElement text={'Rakett'} setter={imgProvider.setImgUrl} url={"../assets/SVG/Rocket.svg"}/>
+                <ListElement text={'Tenkende'} setter={imgProvider.setImgUrl} url={"../assets/SVG/Thinking.svg"}/>
+                <ListElement text={'Mandala'} setter={imgProvider.setImgUrl} url={"../assets/SVG/AnimatedMandala.svg"}/>
             </ul>
             <h4>Poesi</h4>
             <ul>
