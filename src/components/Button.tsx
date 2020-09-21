@@ -7,9 +7,8 @@ interface Props {
 
 export default function Button(props:Props) {
     return (
-        <div>
-            <button id="{props.id}">{props.text}</button>
-        </div>
+        <button id={props.id}>{props.text}</button>
+    
     )
 }
 
