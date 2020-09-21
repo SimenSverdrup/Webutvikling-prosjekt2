@@ -5,12 +5,6 @@ import Thinking from "../assets/SVG/Thinking.svg";
 import AnimatedMandala from "../assets/SVG/AnimatedMandala.svg";
 
 
-/*import Thinking from "../Contents/SVG/Thinking.svg";
-import AnimatedMandala from '../Contents/SVG/AniatedMandala.svg';*/
-
-
-// må alt innhold ligge i src mtp context?
-
 const Svg = () => {
     const {imgProvider} = React.useContext(GalleryContext)!;
     const [data, setData ] = React.useState(Rocket);
@@ -37,15 +31,3 @@ const Svg = () => {
 
 export default Svg;
 
-
-
-/*export default function GridSvg() {
-    return (
-        <div id="grid_svg">
-
-            <img src={process.env.PUBLIC_URL + 'Contents/SVG/9va-rocket-blue-and-red.svg'} />
-        </div>
-    )
-}
-
-*/
