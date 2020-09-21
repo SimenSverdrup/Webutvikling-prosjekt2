@@ -1,33 +1,33 @@
 import React from 'react';
-import { GalleryContext } from '../context/GalleryContext';
-import Rocket from "/public/Contents/SVG";
-import Thinking from "/public/Contents/SVG";
-import AnimatedMandala.svg from 'public/Contents/SVG';
+import {GalleryContext} from '../context/GalleryContext';
+import Rocket from "/public/Contents/SVG/Rocket.svg";
+import Thinking from "/public/Contents/SVG/Thinking.svg";
+import AnimatedMandala from '/public/Contents/SVG/AniatedMandala.svg';
 
 
 
 
 const Svg = () => {
-    const {ImgProvider} = React.useContext(GalleryContext);
-    const [data, setData ] = React.useState(Rocket.svg);
+    const {imgProvider} = React.useContext(GalleryContext);
+    const [data, setData ] = React.useState(Rocket);
     React.useEffect( () => {
-        if (ImgProvider) {
-            switch (ImgProvider.imgUrl) {
+        if (imgProvider) {
+            switch (imgProvider.imgUrl) {
                 case 'Rocket.svg':
-                    setData(Rocket.svg);
+                    setData(Rocket);
                     break;
                 case 'AnimatedMandala.svg':
-                    setData(AnimatedMandala.svg);
+                    setData(AnimatedMandala);
                     break;
                 case 'Thinking.svg':
-                    setData(Thinking.svg);
+                    setData(Thinking);
                     break;
             }
         }
-    }, [ImgProvider])
+    }, [imgProvider])
 
     return(<div id="grid_svg">
-        <img src={process.env.PUBLIC_URL + 'Contents/SVG/9va-rocket-blue-and-red.svg'} />
+        <img src={data} />
     </div>);
 }
 
