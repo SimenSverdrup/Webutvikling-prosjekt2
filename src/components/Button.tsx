@@ -5,10 +5,9 @@ interface Props {
     id: string;
 }
 
-export default function Button(props:Props) {
+function Button(props:Props) {
     return (
         <button id={props.id}>{props.text}</button>
-    
     )
 }
 
@@ -21,3 +20,5 @@ export default function Button(props:Props) {
         </div>
     )
 }*/
+
+export default Button;

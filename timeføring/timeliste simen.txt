@@ -6,7 +6,7 @@
 14.09: 4 timer (fikse merge issues, pynte på poem, begynne på musikkspiller)
 17.09: 5 timer (fikse onclick, lese opp på hooks)
 18.09: 2 timer (fikse musikk state endring, finne ut at PoetryDB var nede...)
-22.09: 1 time (fikse merge requests og diverse, endre cursor for hover)
+22.09: 4 timer (fikse merge requests og diverse, endre cursor for hover, legg til sessionstorage funksjonalitet på svg, poetry og musikk)
 
 
-Totalt: timer
+Totalt: X timer
