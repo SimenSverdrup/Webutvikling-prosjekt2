@@ -1,15 +1,20 @@
 import React, { useContext } from 'react';
 import { GalleryContext } from'../context/GalleryContext';
 
+// her definerer vi bare tingene våre
 interface Props {
+    // vi ser at text er en string
     text: string;
-    setter: (val: string) => void; 
+    // setter er en fuksjon som tar inn en string og som ikke returnerer noe
+    setter: (val: string) => void;
+    // url er en string
     url: string;
 }
 
 export default function ListElement(props:Props) {
     
     return (
-                <li onClick={() => props.setter(props.url)}>{props.text}</li>) //bytt setter fra props.txt til props.url
-
+        // {props.text} inni setter bare den teksten vi sender inn i listeelementet
+        // ved klikk på elementet kjører vi setter-funksjonen med url-en vi sender inn
+        <li onClick={() => props.setter(props.url)}>{props.text}</li>)
 }
