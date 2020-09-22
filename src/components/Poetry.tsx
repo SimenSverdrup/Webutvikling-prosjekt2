@@ -15,10 +15,10 @@ const Poetry = () => {
             .then(
                 (json) => {
                     // Endre tall i slice for å få med flere linjer i diktet
-                    setData(json[0].lines?.slice(0, 7).join("\n"))
-                }).catch(err => {
-                    console.log(err);
-                    setData("Unable to fetch poetry.");
+                    setData(json[0].lines?.slice(0, 15).join("\n"))
+                })
+            .catch(() => {
+                    setData("Select an author to display beautiful poetry");
         });
     },[poemProvider])
 
