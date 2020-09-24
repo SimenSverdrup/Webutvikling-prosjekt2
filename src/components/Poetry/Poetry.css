@@ -1,0 +1,27 @@
+#poem{
+    font-family: 'Dancing Script', cursive;
+    font-size: x-large;
+}
+
+#poem {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+@media only screen and (max-width: 912px) {
+    #poem {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+}
+
+@media only screen and (max-width: 683px) {
+    #poem {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+}
