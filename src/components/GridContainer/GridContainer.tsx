@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import GridSvg from './GridSvg';
-import Music from './Music';
-import Poetry from './Poetry';
-import Gallery from './Gallery';
-import GridFavourite from './Button';
+import GridSvg from '../GridSvg/GridSvg';
+import Music from '../Music/Music';
+import Poetry from '../Poetry/Poetry';
+import GridFavourite from '../Button/Button';
+import './GridContainer.css';
 
 
 export default function GridContainer() {
@@ -22,8 +22,3 @@ export default function GridContainer() {
         </div>
     )
 }
-
-/* context */
-
-// Gjør dette inni context
-// <button onClick={() => setImgChoice(3)}>Vis bilde 3</button>

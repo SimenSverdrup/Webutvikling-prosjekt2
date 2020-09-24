@@ -1,8 +1,9 @@
 import React from 'react';
-import {GalleryContext} from '../context/GalleryContext';
-import Rocket from "../assets/SVG/Rocket.svg";
-import Thinking from "../assets/SVG/Thinking.svg";
-import AnimatedMandala from "../assets/SVG/AnimatedMandala.svg";
+import {GalleryContext} from '../../context/GalleryContext';
+import Rocket from "../../assets/SVG/Rocket.svg";
+import Thinking from "../../assets/SVG/Thinking.svg";
+import AnimatedMandala from "../../assets/SVG/AnimatedMandala.svg";
+import './GridSvg.css';
 
 
 const Svg = () => {

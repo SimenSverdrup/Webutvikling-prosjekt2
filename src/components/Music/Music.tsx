@@ -1,8 +1,9 @@
 import React from 'react';
-import { GalleryContext } from '../context/GalleryContext';
-import Canon from '../assets/Canon.mp3';
-import Boo from '../assets/boohiss.mp3';
-import Applause from '../assets/applause6.mp3';
+import { GalleryContext } from '../../context/GalleryContext';
+import Canon from '../../assets/Canon.mp3';
+import Boo from '../../assets/boohiss.mp3';
+import Applause from '../../assets/applause6.mp3';
+import './Music.css';
 
 
 const Music = () => {

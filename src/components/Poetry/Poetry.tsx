@@ -1,6 +1,6 @@
 import './Poetry.css';
 import * as React from "react";
-import { GalleryContext } from '../context/GalleryContext';
+import { GalleryContext } from '../../context/GalleryContext';
 
 
 const Poetry = () => {

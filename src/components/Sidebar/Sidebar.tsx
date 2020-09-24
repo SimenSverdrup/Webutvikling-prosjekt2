@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
-import { GalleryContext } from '../context/GalleryContext';
-import Button from './Button';
-import GridFavourite from './Button';
-import ListElement from './ListElement';
+import { GalleryContext } from '../../context/GalleryContext';
+import Button from '../Button/Button';
+import GridFavourite from '../Button/Button';
+import ListElement from '../ListElement/ListElement';
+import './Sidebar.css';
 
 
 export default function Sidebar() {
