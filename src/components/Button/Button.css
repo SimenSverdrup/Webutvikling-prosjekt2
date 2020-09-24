@@ -5,7 +5,8 @@
     border-radius: 6px;
     background-color: #83b5bb38;
     border-color: #c8dde6;
-  }
+    cursor: pointer;
+}
   
   #loadBut {
     /*margin: 6% auto auto 18%;*/
@@ -15,6 +16,7 @@
     border-radius: 6px;
     background-color: #83b5bb38;
     border-color: #c8dde6;
+    cursor: pointer;
   }
 
   
@@ -27,6 +29,7 @@
         grid-row-start: 3;
         grid-row-end: 4;
         margin: 0 auto auto 30px;
+        cursor: pointer;
     }
 
     #loadBut {
@@ -35,5 +38,6 @@
         grid-row-start: 3;
         grid-row-end: 4;
         margin: 0 auto auto 15%;
+        cursor: pointer;
     }
 }

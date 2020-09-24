@@ -43,9 +43,8 @@ export default function Sidebar() {
             </ul>
 
             {/*<GridFavourite />*/}
-            <Button id={"saveBut"} text={'Lagre favoritt'}/>
-            <Button id={"loadBut"} text={'Hent favoritt'}/>
-
+            <Button id={'saveBut'} text={'Lagre favoritt'}/>
+            <Button id={'loadBut'} text={'Hent favoritt'}/>
 
         </div>
     )

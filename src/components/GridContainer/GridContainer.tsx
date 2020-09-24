@@ -16,8 +16,6 @@ export default function GridContainer() {
         <div id="grid_container">
             <GridSvg />
             <Poetry />
-            {/*<Gallery img={imgChoice} />*/}
-            {/*<button onClick={() => setImgChoice(3)}>Vis bilde 3</button>*/}
             <Music />
         </div>
     )
