@@ -1,0 +1,43 @@
+#saveBut {
+    /*margin: 50% auto auto 18%;*/
+    margin: 13vh auto auto 3.6vw;
+    padding: 4%;
+    border-radius: 6px;
+    background-color: #83b5bb38;
+    border-color: #c8dde6;
+    cursor: pointer;
+}
+  
+  #loadBut {
+    /*margin: 6% auto auto 18%;*/
+    margin: 1.5vh auto auto 3.5vw;
+    padding: 4%;
+    padding: 4%;
+    border-radius: 6px;
+    background-color: #83b5bb38;
+    border-color: #c8dde6;
+    cursor: pointer;
+  }
+
+  
+  
+/* Veldig smal pc-skjerm/mobil høykant. Hadde tidligere 765 */
+@media only screen and (max-width: 683px) {
+    #saveBut {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 0 auto auto 30px;
+        cursor: pointer;
+    }
+
+    #loadBut {
+        grid-column-start: 4;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 0 auto auto 15%;
+        cursor: pointer;
+    }
+}

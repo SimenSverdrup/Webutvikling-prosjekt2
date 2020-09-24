@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import Title from './components/Title';
-import GridContainer from './components/GridContainer';
+import Title from './components/Title/Title';
+import GridContainer from './components/GridContainer/GridContainer';
 import './App.css';
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Sidebar/Sidebar';
 import { GalleryContext } from './context/GalleryContext';
 
 function App() {
@@ -12,11 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <Title>Utstillingsnavn</Title>
+      <Title>Galleriet</Title>
       <Sidebar />
-  {/*<p style={{marginLeft: '400px'}}>Dette er imgUrl: {imgProvider.imgUrl}</p>
-  <p style={{marginLeft: '400px'}}>Dette er soundUrl: {soundProvider.soundUrl}</p>
-  <p style={{marginLeft: '400px'}}>Dette er poemUrl: {poemProvider.poemUrl}</p>*/}
       <GridContainer />
     </div>
   );

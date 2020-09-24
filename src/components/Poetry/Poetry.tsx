@@ -1,7 +1,11 @@
 import './Poetry.css';
 import * as React from "react";
+<<<<<<< HEAD:src/components/Poetry.tsx
 import {useEffect} from "react";
 import { GalleryContext } from '../context/GalleryContext';
+=======
+import { GalleryContext } from '../../context/GalleryContext';
+>>>>>>> 6c40ccd79f05d647fc00d19d94c6e95b69bedb0d:src/components/Poetry/Poetry.tsx
 
 const Poetry = () => {
     const {poemProvider} = React.useContext(GalleryContext)!;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { GalleryContext } from '../context/GalleryContext';
+import { GalleryContext } from '../../context/GalleryContext';
 
 
 interface Props {

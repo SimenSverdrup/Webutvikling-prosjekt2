@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
-import { GalleryContext } from'../context/GalleryContext';
+import { GalleryContext } from'../../context/GalleryContext';
+import './ListElement.css';
 
 // her definerer vi bare tingene våre
 interface Props {
