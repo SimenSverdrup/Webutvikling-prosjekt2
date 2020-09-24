@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { GalleryContext } from '../context/GalleryContext';
 import Button from './Button';
-import GridFavourite from './Button';
 import ListElement from './ListElement';
 
 
@@ -42,9 +41,8 @@ export default function Sidebar() {
             </ul>
 
             {/*<GridFavourite />*/}
-            <Button id={"saveBut"} text={'Lagre favoritt'}/>
-            <Button id={"loadBut"} text={'Hent favoritt'}/>
-
+            <Button id={'saveBut'} text={'Lagre favoritt'}/>
+            <Button id={'loadBut'} text={'Hent favoritt'}/>
 
         </div>
     )
