@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { GalleryContext } from'../../context/GalleryContext';
+import React from 'react';
 import './ListElement.css';
 
 // her definerer vi bare tingene våre

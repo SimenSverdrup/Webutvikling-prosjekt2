@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import GridSvg from '../GridSvg/GridSvg';
 import Music from '../Music/Music';
 import Poetry from '../Poetry/Poetry';
-import GridFavourite from '../Button/Button';
 import './GridContainer.css';
 
 

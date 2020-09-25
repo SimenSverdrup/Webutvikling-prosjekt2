@@ -1,17 +1,9 @@
-<<<<<<< HEAD:src/components/GridSvg.tsx
 import React, {useEffect} from 'react';
-import {GalleryContext} from '../context/GalleryContext';
-import Rocket from "../assets/SVG/Rocket.svg";
-import Thinking from "../assets/SVG/Thinking.svg";
-import AnimatedMandala from "../assets/SVG/AnimatedMandala.svg";
-=======
-import React from 'react';
 import {GalleryContext} from '../../context/GalleryContext';
 import Rocket from "../../assets/SVG/Rocket.svg";
 import Thinking from "../../assets/SVG/Thinking.svg";
 import AnimatedMandala from "../../assets/SVG/AnimatedMandala.svg";
 import './GridSvg.css';
->>>>>>> 6c40ccd79f05d647fc00d19d94c6e95b69bedb0d:src/components/GridSvg/GridSvg.tsx
 
 
 const Svg = () => {
