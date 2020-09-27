@@ -1,11 +1,8 @@
 #poem{
-    font-family: 'Dancing Script', cursive;
-    font-size: x-large;
-}
-
-#poem {
-    grid-column-start: 2;
-    grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  font-family: 'Dancing Script', cursive;
+  font-size: x-large;
 }
 
 @media only screen and (max-width: 912px) {
