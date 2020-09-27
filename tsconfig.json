@@ -18,7 +18,8 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-//including 'react-test-renderer' module
+
+    //including 'react-test-renderer' module
     "noImplicitAny": false
   },
   "include": [
