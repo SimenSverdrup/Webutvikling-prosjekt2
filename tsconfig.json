@@ -17,7 +17,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+//including 'react-test-renderer' module
+    "noImplicitAny": false
   },
   "include": [
     "src"

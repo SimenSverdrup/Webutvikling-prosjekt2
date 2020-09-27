@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Container correctly 1`] = `
+<div
+  className="Sidebar"
+>
+  <button
+    id="saveBut"
+    onClick={[Function]}
+  >
+    1
+  </button>
+  <button
+    id="loadBut"
+    onClick={[Function]}
+  >
+    2
+  </button>
+
+</div>
+`;
+
