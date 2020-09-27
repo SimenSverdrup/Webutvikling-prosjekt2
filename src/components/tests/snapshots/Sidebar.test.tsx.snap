@@ -1,22 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders Container correctly 1`] = `
+exports[`renders Sidebar correctly `] = `
 <div
-  className="Sidebar"
+  className="sidebar"
 >
-  <button
-    id="saveBut"
-    onClick={[Function]}
-  >
-    1
-  </button>
-  <button
-    id="loadBut"
-    onClick={[Function]}
-  >
-    2
-  </button>
 
-</div>
+<h3 className="titleList"
+>
+Utstillingsvalg
+</h3>
+
+<h4
+className="imgTitleList"
+>
+Bilde
+</h4>
+
+  <ul
+    className="list"
+  >
+
+  <ListElement text='Rakett' setter=imgProvider.setImgUrl
+  />
+
+  <ListElement
+  />
+
+  <ListElement
+  />
+  </ul>
+
+
+  <ul
+    className="list"
+  >
+
+ <ListElement text='Rakett' setter=imgProvider.setImgUrl
+   />
+
+   <ListElement
+   />
+
+   <ListElement
+   />
+
+  </ul>
+
+
+  <ul
+    className="list"
+  >
+
+  <ListElement text='Rakett' setter=imgProvider.setImgUrl
+    />
+
+    <ListElement
+    />
+
+    <ListElement
+    />
+
+  </ul>
+
+  <Button id={"saveBut"} text={'Lagre favoritt'}
+  />
+
+   <Button id={"loadBut"} text={'Hent favoritt'}
+   />
+
 `;
-
