@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Sidebar from '../Sidebar/Sidebar';
-import GalleryContextProvider from "../../context/GalleryContext";
+import Sidebar from '../components/Sidebar/Sidebar';
+import GalleryContextProvider from "../context/GalleryContext";
 
 
 it('renders sidebar correctly ', () => {
@@ -10,6 +10,5 @@ it('renders sidebar correctly ', () => {
         <Sidebar />
         </GalleryContextProvider>).toJSON();
     expect(tree).toMatchSnapshot();
-
 });
 

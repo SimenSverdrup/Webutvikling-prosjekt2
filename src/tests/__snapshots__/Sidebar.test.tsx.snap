@@ -89,13 +89,19 @@ exports[`renders sidebar correctly  1`] = `
   </ul>
   <button
     id="saveBut"
+    onClick={[Function]}
   >
+     
     Lagre favoritt
+     
   </button>
   <button
     id="loadBut"
+    onClick={[Function]}
   >
+     
     Hent favoritt
+     
   </button>
 </div>
 `;
