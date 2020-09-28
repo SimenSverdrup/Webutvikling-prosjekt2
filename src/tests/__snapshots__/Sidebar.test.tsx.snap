@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders sidebar correctly  1`] = `
+<div
+  className="sidebar"
+  id="sidebar"
+>
+  <h3
+    className="titleList"
+    id="titleList"
+  >
+    Utstillingsvalg
+  </h3>
+  <h4
+    className="imgTitleList"
+    id="imgTitleList"
+  >
+    Bilde
+  </h4>
+  <ul
+    className="list"
+    id="imgList"
+  >
+    <li
+      onClick={[Function]}
+    >
+      Rakett
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Tenkende
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Mandala
+    </li>
+  </ul>
+  <h4
+    id="poemTitleList"
+  >
+    Poesi
+  </h4>
+  <ul
+    className="list"
+    id="poemList"
+  >
+    <li
+      onClick={[Function]}
+    >
+      Shakespeare
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Shelley
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Downson
+    </li>
+  </ul>
+  <h4
+    id="audTitleList"
+  >
+    Lyd
+  </h4>
+  <ul
+    className="list"
+    id="audList"
+  >
+    <li
+      onClick={[Function]}
+    >
+      Pachelbel
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Applause
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      Boo
+    </li>
+  </ul>
+  <button
+    id="saveBut"
+    onClick={[Function]}
+  >
+     
+    Lagre favoritt
+     
+  </button>
+  <button
+    id="loadBut"
+    onClick={[Function]}
+  >
+     
+    Hent favoritt
+     
+  </button>
+</div>
+`;

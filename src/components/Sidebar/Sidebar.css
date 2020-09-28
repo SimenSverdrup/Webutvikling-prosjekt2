@@ -1,0 +1,103 @@
+#sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #EEEEEE;
+    position: absolute;
+    margin: 0 auto 0 0;
+  }
+  
+  #sidebar > h3 {
+    margin-left: 5%;
+  }
+  
+  #sidebar > h4 {
+    margin-left: 15%;
+    margin-top: 20%;
+    margin-bottom: 2%;
+  }
+  
+  #sidebar > ul {
+    margin-left: 15%;
+    cursor: pointer;
+  }
+  
+  #sidebar > h4 {
+    margin-left: 15%;
+  }
+
+
+ @media only screen and (max-width: 683px) {
+  #sidebar {
+    display: grid;
+    grid-template-columns: 12% 11% 11% 11% 11% 11% 11% 11% 11%;
+    height: 135px;
+    width: 100%;
+    background-color: #EEEEEE;
+    position: absolute;
+    margin: 0;
+  }
+
+  #sidebar > h4 {
+    margin-left: 15%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+
+  #sidebar > ul, h4 {
+    margin: 0 auto 0 0;
+  }
+
+  #imgTitleList {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  #poemTitleList {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  #audTitleList {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  #imgList {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #poemList {
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  #audList {
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 13px;
+  }
+ }

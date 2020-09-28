@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import GalleryContextProvider from './context/GalleryContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GalleryContextProvider>
+      <App />
+    </GalleryContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
