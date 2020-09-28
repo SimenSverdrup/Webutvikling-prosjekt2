@@ -1,44 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prosjektet vårt er basert på Node og bruk av NPM, og vi brukte pakken create-react-app med typescript template for å komme i gang. Det første som ble laget var designet og deretter det faktiske kodede layoutet. Vi bestemte oss for å bruke en statisk sidebar med interaksjonsmuligheter da det er praktisk for brukeren og det pent skiller gallerivalgene fra den faktiske utstillingen. Løsningen er implementert med Typescript og React, og vi har delt sideelementene opp i komponenter som kommuniserer ved bruk av states og props. Alle komponentene har en egen mappe som inneholder tsx-filen og tilhørende css-fil for å holde en ryddig filstruktur.
 
-## Available Scripts
+Vi har brukt context for å kunne lagre de nødvendige state’ene som globale verdier. Ved å flytte state’ene bort fra komponentene og over til contexten kan alle komponentene i koden aksessere dem. For å endre på utstillingen må brukeren endre på parameterne i menybaren. Ved å klikke på de respektive knappene kan hun endre utstillingens bilde, poesi og lydavspilling. Dette skjer ved at hvert listeelement i menybaren har en onClick, setter og en url. Når brukeren klikker på et listeelement settes den tilhørende url’en som den aktive.
 
-In the project directory, you can run:
+Vi har lagd siden vår responsiv ved å bruke media queries. For å få skalerende bilder og et flytende layout bruker vi grid som inneholder bildet, poesien og musikkspilleren, og oppgitt dette i relative størrelser som viewport og prosent. Dette gjør at når skjermen blir mindre blir også utstillingselementene mindre. Ved en skjermbredde på over 912px står bildet og poesien ved siden av hverandre med en størrelsesfordeling på 55% og 45%. Blir skjermen mindre enn dette endres gridet til å kun ha én bredde, og bilde, poesi og lydavspilling plasseres under hverandre. Ved disse skjermstørrelsene forblir menybaren samme størrelse da vi mener at den trenger en viss bredde og ikke burde bli smalere samtidig som utstillingselementene blir det. Blir skjermens bredde mindre enn 765px (mobil størrelse) flyttes menybaren opp til toppen av siden, og bildet, poesien og lydavspillingen forblir under hverandre. Vi har altså tilpasset design for tre ulike skjermstørrelser.
 
-### `yarn start`
+Vi ønsket å bruke SVG-animasjoner, og bestemte oss tidlig for å finne og importere allerede ferdige animasjoner. Dette ble funnet på: https://freesvg.org/, og importert inn i src-mappen. På denne måten hadde vi full tilgang til animasjonene når vi skulle hente og senere displaye dem. Logikken er gitt ved state hooks, hvor state settes som resultat av brukerens interaksjon med gitt funksjonalitet, koblet til side-menyen og favorittknappen. En av animasjonene er blitt valgt som standard ved oppstart.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+For poesien har vi brukt Asynchronous JavaScript (AJAX) gjennom fetch, opp imot PoetryDB APIet. Her har vi satt opp tre ulike URLs, for tre ulike forfattere/verker. Disse endres ved hjelp av state hooks, ettersom brukeren trykker på elementene i menylisten. API-callet returnerer en JSON fil, som deretter parses og pyntes litt på - før den lagres i state. API-callet er lagt i en useEffect(), med dependencies på data (state) og poemProvider (context som endres ved brukerinteraksjon). Dermed vil fetch-en kjøres på nytt ved endringer på disse. Det er også lagt inn feilhåndtering, dersom API-callet ikke får resultat som forventet.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+For musikken er løsningen satt opp ganske likt som for animasjonene. State hooks brukes for å detektere brukerinteraksjon og state oppdateres deretter. Avhengig av brukerens valg, settes en musikkspiller opp med en av tre ulike lydspor. Musikkspilleren er satt opp med HTML5 audio-taggen. Lydsporene lastes inn direkte, ved at vi har modifisert react-app-env.d for korrekt håndtering av mp3-filer.
 
-### `yarn test`
+Session storage er brukt for musikken, poesien og animasjonene. Dette gjøres ved at variabler for valg av lydspor, forfatter og animasjon settes i session storage hver gang de oppdateres av brukeren. Hver gang komponentene lastes på nytt, vil komponenten først sjekke om det er satt noe valg i session storage før den eventuelt setter initialstatus.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Local storage brukes gjennom “Lagre favoritt”- og “Hent favoritt”-knappene. Når brukeren trykker på en av knappene, vil Sidebar.tsx sende id og tekst for knappen som props ned i hierarkiet, til Button.tsx. Avhengig av om id-en tilsier at “hent” eller “lagre”-knappen er trykket, vil ulike funksjoner kalles i Button komponenten (som er satt opp som en klasse, for å tilfredsstille kravet i prosjektet om klassebruk). Ettersom Button måtte være en klasse, gjorde det jobben en del vanskeligere, ved at vi ikke kunne bruke state hooks på samme måte. Løsningen vi kom fram til var å benytte session storage som “mellommann”, ettersom musikk, lyd og poesi-komponentene allerede hadde funksjonalitet for å laste inn state fra session storage. Ved trykk på “lagre”-knappen, vil Button hente nåværende status fra session storage og oppdatere local storage i henhold. Når “hent”-knappen trykkes, vil Button sette session storage variablene til de lagrede local storage variablene. Til slutt oppdateres siden, for å få rendret endringene.
 
-### `yarn build`
+Testing gjennom snapshot-metoden: Vi valgte å ta utgangspunkt i sidebaren, og se om denne var testbar ved snapshot testing. Mange endringer har blitt gjort bak scenen iform av konfigurering av de ulike .json filene. Med dette iorden har en testing fil blitt laget, Sidebar.test.tsx. Ved å kjøre npm test kan alle tester som utføres observeres med endelig resultat. Resultatet av snapshot testen lagres i mappen __snapshots__ ved Sidebar.test.tsx.snap.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Testing av brukergrensesnitt og responsivt design:
+For å teste brukergrensesnittet og det responsive designet har vi testet nettsiden på mobil og pad med både vertikal horisontal orientering, og pc med variasjon i browser-bredde. Til dette brukte vi chrome sitt inspiseringsverktøy og testet siden for ulike formater ved å bruke «device toolbar». Dette brukte vi også under utviklingen for å passe på at vi fikk et fungerende resultat. For mobil har vi testet spesielt for iPhone 5/SE da det er den mobilen med minst skjerm. Går vi inn i modus for denne mobilen ser siden ut som den skal gjøre, og funksjonene som lagring, lydavspilling og endring av parametere fungerer. Legger vi mobilen horisontalt ser vi at bredden av skjermen fortsatt går innenfor minstekravet og forblir lik som ved vertikal orientering. For pad-størrelsen har vi testet på en helt vanlig iPad. Ved horisontal orientering ligger bildet og diktet ved siden av hverandre som i et stort browservindu. Ved vertikal orientering slår den første media quiery’en til og bilde og dikt ligger under hverandre, mens valgabren fortsatt er på siden. Også her fungerer all funksjonalitet som den skal. Åpner man siden i et browser-vindu kan man selv velge størrelsen på skjermen og på den måten komme innom alle de tre tilpasningene. Ved å sakte endre på browserbredden ser vi at media query’ene slår til når de skal. Ved alle de tre stadiene har vi sjekket at elementene flytter seg som de skal og at all funksjonalitet fungerer.
