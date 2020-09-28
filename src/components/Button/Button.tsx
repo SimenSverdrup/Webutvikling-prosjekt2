@@ -1,5 +1,6 @@
 import React from 'react';
 import { GalleryContext } from '../../context/GalleryContext';
+import './Button.css';
 
 
 interface Props {
@@ -67,9 +68,7 @@ class Button extends React.Component<Props, State> {
 
     render () {
         return(
-            <div>
                 <button id={this.props.id} onClick={this.onClick.bind(this)}> {this.props.text} </button>
-            </div>
         );
     }
 

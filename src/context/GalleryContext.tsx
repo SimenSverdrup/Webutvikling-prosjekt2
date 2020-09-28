@@ -4,8 +4,8 @@ import React, { useState, useMemo } from 'react';
 // øverst i en java-fil
 interface GalleryContextProps {
     imgProvider: ImgProvider;
-    soundProvider: SoundProvider
-    poemProvider: PoemProvider
+    soundProvider: SoundProvider;
+    poemProvider: PoemProvider;
 }
 
 interface ImgProvider {
