@@ -1,0 +1,24 @@
+#grid_container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    width: 70%;
+    margin: 5% 0 0% 240px;
+  }
+
+@media only screen and (max-width: 912px) {
+  #grid_container {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 60%;
+    margin: 0 0 0% 270px;
+  }
+}
+
+@media only screen and (max-width: 683px) {
+  #grid_container {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 70%;
+    margin: 170px auto auto auto;
+  }
+}
