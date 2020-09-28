@@ -12,12 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Title>Heihei dette er via app.tsx</Title> */}
       <Title>Utstillingsnavn</Title>
       <Sidebar />
-  {/*<p style={{marginLeft: '400px'}}>Dette er imgUrl: {imgProvider.imgUrl}</p>
-  <p style={{marginLeft: '400px'}}>Dette er soundUrl: {soundProvider.soundUrl}</p>
-  <p style={{marginLeft: '400px'}}>Dette er poemUrl: {poemProvider.poemUrl}</p>*/}
       <GridContainer />
     </div>
   );
