@@ -19,3 +19,10 @@ Testing gjennom snapshot-metoden: Vi valgte å ta utgangspunkt i sidebaren, og s
 
 Testing av brukergrensesnitt og responsivt design:
 For å teste brukergrensesnittet og det responsive designet har vi testet nettsiden på mobil og pad med både vertikal horisontal orientering, og pc med variasjon i browser-bredde. Til dette brukte vi chrome sitt inspiseringsverktøy og testet siden for ulike formater ved å bruke «device toolbar». Dette brukte vi også under utviklingen for å passe på at vi fikk et fungerende resultat. For mobil har vi testet spesielt for iPhone 5/SE da det er den mobilen med minst skjerm. Går vi inn i modus for denne mobilen ser siden ut som den skal gjøre, og funksjonene som lagring, lydavspilling og endring av parametere fungerer. Legger vi mobilen horisontalt ser vi at bredden av skjermen fortsatt går innenfor minstekravet og forblir lik som ved vertikal orientering. For pad-størrelsen har vi testet på en helt vanlig iPad. Ved horisontal orientering ligger bildet og diktet ved siden av hverandre som i et stort browservindu. Ved vertikal orientering slår den første media quiery’en til og bilde og dikt ligger under hverandre, mens valgabren fortsatt er på siden. Også her fungerer all funksjonalitet som den skal. Åpner man siden i et browser-vindu kan man selv velge størrelsen på skjermen og på den måten komme innom alle de tre tilpasningene. Ved å sakte endre på browserbredden ser vi at media query’ene slår til når de skal. Ved alle de tre stadiene har vi sjekket at elementene flytter seg som de skal og at all funksjonalitet fungerer.
+
+
+Kjør prosjektet (stopp med `Ctr + C`):
+`npm start`
+
+Kjør tester:
+`npm test`
