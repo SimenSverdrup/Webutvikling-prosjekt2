@@ -14,7 +14,6 @@
   }
 }
 
-/* Veldig smal pc-skjerm/mobil høykant. Hadde tidligere 765 */
 @media only screen and (max-width: 683px) {
   #grid_container {
     display: grid;

@@ -7,19 +7,9 @@ import './Sidebar.css';
 
 
 export default function Sidebar() {
-    // han sa jeg skulle ha fuksjon inni funksjon (altså at det som er kommentert her
-    // er inni en ny funksjon som endrer ting, altså js.delen)
-
-    //state 
-
-    //funksjoner som endrer state
-
-
-    //ting som vises
-
+    
     const { imgProvider, soundProvider, poemProvider }  = useContext(GalleryContext)!;
     
-    //Legg til URL på hver ListeElement
     return (
         <div id="sidebar">
             <h3 id="titleList">Utstillingsvalg</h3>
@@ -41,8 +31,6 @@ export default function Sidebar() {
                 <ListElement text={'Applause'} setter={soundProvider.setSoundUrl} url={"Applause"}/>
                 <ListElement text={'Boo'} setter={soundProvider.setSoundUrl} url={"Boo"}/>
             </ul>
-
-            {/*<GridFavourite />*/}
             <Button id={'saveBut'} text={'Lagre favoritt'}/>
             <Button id={'loadBut'} text={'Hent favoritt'}/>
 
